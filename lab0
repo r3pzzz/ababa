@@ -2,9 +2,9 @@
 
 int main()
 {
-  printf("Hello World")
+  printf("Hello World");
 
-  printf("OK")
+  printf("OK");
 
   return 0;
 }
