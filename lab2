@@ -1,0 +1,26 @@
+include <stdio.h>
+#include <locale.h> // для функции setlocale
+
+int main()
+{
+  setlocale(LC_ALL, "");
+  int m=2;
+    int massiv[m][m];
+    
+    for (int i=0; i<m; i++)
+        for (int j=0; j<m; j++)
+        {
+            printf("Массив[%d][%d] = ", i+1, j+1);
+            scanf("%d", &massiv[i][j]);
+        }
+        for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            printf("%d \t", massiv[i][j]);
+        }
+        printf("\n\n");
+    }
+    printf("%d  %d\n\n%d  %d", massiv[0][0] * massiv[0][0], massiv[0][1] * massiv[0][1], massiv[1][0] * massiv[1][0], massiv[1][1] * massiv[1][1]);
+    return 0;
+}
