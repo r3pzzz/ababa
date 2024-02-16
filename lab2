@@ -4,6 +4,35 @@
 int main()
 {
   setlocale(LC_ALL, "");
+  int m=3;
+    double massiv[m][m];
+    
+    for (int i=0; i<m; i++)
+        for (int j=0; j<m; j++)
+        {
+            printf("Массив[%d][%d] = ", i+1, j+1);
+            scanf("%lf", &massiv[i][j]);
+        }
+        for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            printf("%.3lf \t", massiv[i][j]);
+        }
+        printf("\n\n");
+    }
+    printf("Сумма элементов главной диагонли:%lf\nСумма элементов побочной диагонали:%lf", massiv[0][0] + massiv[1][1] + massiv[2][2], massiv[0][2] + massiv[1][1] + massiv[2][0]);
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{
+  setlocale(LC_ALL, "");
   int m=2;
     int massiv[m][m];
     
@@ -21,6 +50,6 @@ int main()
         }
         printf("\n\n");
     }
-    printf("%d  %d\n\n%d  %d", massiv[0][0] * massiv[0][0], massiv[0][1] * massiv[0][1], massiv[1][0] * massiv[1][0], massiv[1][1] * massiv[1][1]);
+    printf("Квадрат матрицы:\n%d  %d\n\n%d  %d", massiv[0][0] * massiv[0][0], massiv[0][1] * massiv[0][1], massiv[1][0] * massiv[1][0], massiv[1][1] * massiv[1][1]);
     return 0;
 }
